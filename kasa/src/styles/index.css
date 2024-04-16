@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../assets/fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+html {
+  position: relative;
+  min-height: 100%;
+  margin: auto;
+  max-width: 1440px;
+  font-size: 18px;
+  font-family: "Montserrat-Regular";
+}
+
+h1, h2 {
+  font-family: "Montserrat-Medium";
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../assets/fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+html {
+  position: relative;
+  min-height: 100%;
+  margin: auto;
+  max-width: 1440px;
+  font-size: 18px;
+  font-family: "Montserrat-Regular";
+}
+
+h1, h2 {
+  font-family: "Montserrat-Medium";
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+}
+.header__logo-img {
+  width: 10rem;
+}
+.header__nav__nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 100rem;
+}
+.header__nav__item {
+  font-size: 19px;
+  margin: 1rem 0.5rem;
+}
+.header__nav__nav-link {
+  padding: 0.2rem 0.7rem;
+  transition: all 350ms ease-in-out;
+}
+.header__nav__nav-link--active, .header__nav__nav-link:hover {
+  font-family: "Montserrat-Medium";
+  background: hsla(0, 100%, 82%, 0.2);
+  border-radius: 0.3rem;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+.header__nav-item {
+  display: inline-block; /* ou autre propriété pour tester */
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 98%;
+  }
+  .header__logo-img {
+    width: 7rem;
+  }
+  .header__nav__nav-list {
+    padding-left: 0;
+  }
+  .header__nav__item {
+    margin: 0.5rem;
+  }
+  .header__nav__nav-link {
+    padding: 0.2rem 0.3rem;
+  }
+}/*# sourceMappingURL=index.css.map */
