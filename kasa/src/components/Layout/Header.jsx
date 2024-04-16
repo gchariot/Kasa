@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../styles/img/logo-kasa.svg';
+import logo from '../../assets/img/logo-kasa.png';
 
 const Header = () => {
     // Fonction pour obtenir la classe de NavLink en fonction de l'état actif
