@@ -86,8 +86,94 @@
   }
 }
 
-.footer {
+.housings_container {
+  width: 95%;
+  margin: 2rem auto 9rem auto;
+  background: #e9e9e9;
+  border-radius: 0.8rem;
+}
+@media (max-width: 768px) {
+  .housings_container {
+    background-color: transparent;
+    margin: 0 0 7rem 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+.housings_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+@media (max-width: 768px) {
+  .housings_list {
+    padding: 0;
+  }
+}
+
+.housing {
+  width: 33%;
+  transition: transform 250ms ease-in-out;
+}
+@media (max-width: 768px) {
+  .housing {
+    width: 100%;
+  }
+  .housing_figure {
+    margin: 1rem 0.5rem;
+  }
+  .housing_figure_cover {
+    height: 400px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1090px) {
+  .housing {
+    width: 50%;
+  }
+}
+.housing_figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1803921569);
+  margin-block: 0;
+  margin-inline: 0;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+.housing_figure:hover {
+  transform: scale(1.03);
+}
+.housing_figure_cover {
+  width: 100%;
+  height: 290px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
+.housing_figure_figcaption {
   position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 150px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 13%, rgba(0, 212, 255, 0) 70%);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.housing_figure_figcaption_title {
+  color: white;
+  font-size: 18px;
+  width: 95%;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+
+.footer {
   left: 0;
   right: 0;
   bottom: 0;
