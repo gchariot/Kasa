@@ -1,0 +1,45 @@
+.title-error, .p-error, .link-error {
+    text-align: center;
+    color: #FF6060;
+
+    // Styles spécifiques pour .title-error
+    &.title-error {
+        font-weight: 700;
+        font-size: 288px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 96px;
+            line-height: 136px;
+        }
+    }
+
+    // Styles spécifiques pour .p-error
+    &.p-error {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 51px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+            line-height: 25px;
+
+            span {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    // Styles spécifiques pour .link-error
+    &.link-error {
+        display: block;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
