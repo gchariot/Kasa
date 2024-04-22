@@ -5,7 +5,7 @@ import aboutBanner from '../../assets/img/AboutBanner.jpeg'
 const AboutBanner = () => {
     return(
         <Banner
-            title='À propos'
+            title=''
             src={aboutBanner}
         />
     )

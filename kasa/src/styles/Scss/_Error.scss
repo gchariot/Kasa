@@ -1,45 +1,55 @@
-.title-error, .p-error, .link-error {
+.error_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    color: #FF6060;
+    margin-top: 3rem;
+    padding: 1rem;
+}
 
-    // Styles spécifiques pour .title-error
-    &.title-error {
-        font-weight: 700;
-        font-size: 288px;
+.title_error {
+    font-weight: 700;
+    font-size: 250px;
+    line-height: 410px; // Gardez la ligne hauteur si nécessaire
+    margin: 0;
+    color: #FF6060; // Couleur rouge
 
-        @media screen and (max-width: 767px) {
-            font-size: 96px;
-            line-height: 136px;
-        }
+    @media (max-width: 768px) {
+        font-size: 160px;
+        padding-top: 195px;
     }
+}
 
-    // Styles spécifiques pour .p-error
-    &.p-error {
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 51px;
+.p_error {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 51px;
+    color: #FF6060; // Couleur rouge
 
-        @media screen and (max-width: 767px) {
-            font-size: 18px;
-            line-height: 25px;
-
-            span {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
-
-    // Styles spécifiques pour .link-error
-    &.link-error {
-        display: block;
-        font-weight: 500;
+    @media (max-width: 768px) {
         font-size: 18px;
         line-height: 25px;
 
-        @media screen and (max-width: 767px) {
-            font-size: 14px;
-            line-height: 19px;
+        span {
+            display: flex;
+            flex-direction: column;
         }
+    }
+}
+
+.link_error {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: black;
+    margin-top: 3rem;
+    margin-bottom: 1.7rem;
+    text-decoration: underline;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 19px;
+        margin-top: 5rem;
     }
 }
