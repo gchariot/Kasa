@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Housing from "../pages/Housing";
+import Hosting from "../pages/Hosting";
 import Error404 from "../pages/Error404";
 
 const AppRoutes = () => {
@@ -12,7 +12,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/housing/:id" element={<Housing />} />
+        <Route path="/hosting/:id" element={<Hosting />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
