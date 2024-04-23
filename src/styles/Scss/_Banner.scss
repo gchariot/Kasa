@@ -1,10 +1,11 @@
+@import './variables';
 .banner {
-    width: 95%;
-    margin: 20px auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: 15px auto;
 
     &_title {
         z-index: 1;
@@ -13,7 +14,7 @@
         position: absolute;
 
         @media (max-width: 768px) {
-            width: 65%; 
+            width: 70%; 
             padding-left: 1rem;
             justify-content: start; 
         }

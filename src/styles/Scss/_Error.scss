@@ -1,22 +1,22 @@
+@import './variables';
 .error_page {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 3rem;
-    padding: 1rem;
+
 }
 
 .title_error {
     font-weight: 700;
     font-size: 250px;
-    line-height: 410px; // Gardez la ligne hauteur si nécessaire
+    line-height: 410px; 
     margin: 0;
-    color: #FF6060; // Couleur rouge
+    color: $primary-color;
 
     @media (max-width: 768px) {
         font-size: 160px;
-        padding-top: 195px;
+        line-height: 210px;
     }
 }
 
@@ -43,7 +43,6 @@
     font-size: 18px;
     line-height: 25px;
     color: black;
-    margin-top: 3rem;
     margin-bottom: 1.7rem;
     text-decoration: underline;
 

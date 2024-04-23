@@ -1,12 +1,12 @@
 import React from 'react';
-import housings from '../../data/Logements.json';
+import hosting from '../../data/Logements.json';
 import Cards from '../Layout/Cards';
 
 const HomeCards = () => {
     return(
-        <section className='housings_container'>
-            <ul className='housings_list'>
-                {housings.map(({ id, title, cover }) => (
+        <section className='hosting_container'>
+            <ul className='hosting_list'>
+                {hosting.map(({ id, title, cover }) => (
                     <Cards
                         key={id}
                         id={id}

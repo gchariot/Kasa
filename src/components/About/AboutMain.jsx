@@ -3,8 +3,8 @@ import Collapse from "../Layout/Collapse";
 
 const AboutContent = () => {
     return(
-        <section className="about_collapses">
-            <div className="about_collapses_content">
+        <section className="about_collapse">
+            <div className="about_content">
                 <Collapse
                     title='Fiabilité'
                     content='Les annonces postées sur Kasa garantissent une fiabilité totale. 
@@ -12,7 +12,7 @@ const AboutContent = () => {
                     sont régulièrement vérifiées par nos équipes.'
                 />
             </div>
-            <div className="about_collapses_content">
+            <div className="about_content">
                 <Collapse
                     title='Respect'
                     content='La bienveillance fait partie des valeurs fondatrices de Kasa. 
@@ -20,7 +20,7 @@ const AboutContent = () => {
                     entraînera une exclusion de note plateforme.'
                 />
             </div>
-            <div className="about_collapses_content">
+            <div className="about_content">
                 <Collapse
                     title='Service'
                     content='La bienveillance fait partie des valeurs fondatrices de Kasa. 
@@ -28,7 +28,7 @@ const AboutContent = () => {
                     entraînera une exclusion de note plateforme.'
                 />
             </div>
-            <div className="about_collapses_content">
+            <div className="about_content">
                 <Collapse
                     title='Sécurité'
                     content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que 

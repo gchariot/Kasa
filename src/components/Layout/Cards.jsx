@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 
 const Card = ({ id, title, cover }) => {
     // Utilisation de template literals pour construire l'URL de manière plus lisible
-    const url = `/housing/${id}`;
+    const url = `/hosting/${id}`;
 
     return (
-        <li className='housing'>
+        <li className='hosting'>
             <a href={url}>
-                <figure className='housing_figure'>
+                <figure className='hosting_figure'>
                     <img 
                         src={cover} 
                         alt={title} 
-                        className='housing_figure_cover'
+                        className='hosting_figure_cover'
                         loading="lazy" 
                     />
-                    <figcaption className='housing_figure_figcaption'>
-                        <h2 className='housing_figure_figcaption_title'>{title}</h2>
+                    <figcaption className='hosting_figure_figcaption'>
+                        <h2 className='hosting_figure_figcaption_title'>{title}</h2>
                     </figcaption>
                 </figure>
             </a>

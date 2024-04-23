@@ -1,6 +1,34 @@
+@import './Scss/variables';
 @import './Scss/Header';
 @import './Scss/Banner';
 @import './Scss/HomeCards';
 @import './Scss/Footer';
 @import './Scss/Error';
 @import './Scss/Collapse';
+
+html {
+    position: relative;
+    min-height: 100%;
+    margin: auto;
+    max-width: 1440px;
+    font-size: 18px;
+    font-family: $font-primary;
+    background: $secondary-color;
+}
+
+h1, h2 {
+    font-family: $font-secondary;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}

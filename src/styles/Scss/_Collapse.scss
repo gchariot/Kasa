@@ -1,15 +1,16 @@
+@import './variables';
 .collapse {
     &_header {
         z-index: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #FF6060;
         color: white;
-        border-radius: 0.3rem;
-        margin-bottom: 1rem;
+        border-radius: 0.4rem;
+        margin: 1rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         cursor: pointer;
+        background-color: $primary-color;
 
         &_title {
             padding: 0.4rem 0.5rem;
