@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import vectorDown from '../../assets/img/vectorBas.svg'
-import vectorUp from '../../assets/img/vectorHaut.svg'; 
+import vectorDown from '../../assets/img/vectorBas.svg';
+import vectorUp from '../../assets/img/vectorHaut.svg';
 
 const Collapse = (props) => {
     const [openTab, setOpenTab] = useState(false);
@@ -16,7 +16,7 @@ const Collapse = (props) => {
                 <img 
                     src={openTab ? vectorUp : vectorDown}
                     alt={openTab ? "Collapse" : "Expand"} 
-                    className="collapse_header_icon"
+                    className={`collapse_header_icon ${openTab ? "icon-up" : "icon-down"}`}
                 />
             </div>
             {openTab && 

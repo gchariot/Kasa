@@ -5,6 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .header {
   display: flex;
   justify-content: space-between;
@@ -265,15 +267,22 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   background-color: #ff5656;
+  padding: 0.4rem 0.5rem;
 }
 .collapse_header_title {
-  padding: 0.4rem 0.5rem;
   margin: 0;
   font-size: 18px;
 }
 .collapse_header_icon {
-  padding: 0.4rem 0.5rem;
-  font-size: 20px;
+  width: 20px;
+}
+.collapse .icon-down {
+  transform: rotate(0deg);
+  transition: transform 0.4s ease-in-out 0.4s;
+}
+.collapse .icon-up {
+  transform: rotate(180deg);
+  transition: transform 0.4s ease-in-out;
 }
 .collapse_content {
   position: relative;
@@ -305,6 +314,184 @@
     max-height: 100%;
   }
 }
+#carrousel-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+  height: 415px;
+}
+
+.slide {
+  width: 100%;
+  height: 415px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+}
+.slide.active {
+  opacity: 1;
+}
+.slide .slide-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.leftArrow, .rightArrow {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.leftArrow:hover, .rightArrow:hover {
+  opacity: 1;
+}
+.leftArrow img, .rightArrow img {
+  width: 30px;
+  height: auto;
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .housing_page {
+    min-height: 40rem !important;
+  }
+  .housing_page_header {
+    flex-direction: column;
+    margin-bottom: 0 !important;
+  }
+  .housing_page_header_infos_tags_tag {
+    margin-bottom: 1rem !important;
+  }
+  .housing_page_header_hoster {
+    flex-direction: row-reverse !important;
+    align-items: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem;
+  }
+  .housing_page_header_hoster_infos {
+    align-items: center;
+  }
+  .housing_page_header_hoster_infos_name {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .housing_page_header_hoster_ratings {
+    padding: 0 0.2rem 1rem 0 !important;
+  }
+  .housing_page_header_hoster_ratings_star {
+    padding: 0 0.2rem 3rem 0 !important;
+  }
+  .housing_page_collapses {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .housing_page_collapses_content {
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+}
+.housing_page {
+  width: 95%;
+  min-height: 35rem;
+  margin: 1rem auto 7rem auto;
+}
+.housing_page_header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 1rem 0;
+}
+.housing_page_header_infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.housing_page_header_infos_title {
+  font-size: 35px;
+  margin: 0;
+}
+.housing_page_header_infos_subtitle {
+  font-size: 18px;
+  margin: 0.2rem 0 1rem 0;
+}
+.housing_page_header_infos_tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.housing_page_header_infos_tags_tag {
+  font-size: 15px;
+  color: white;
+  background: #ff5656;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+  margin: 0 1rem 0 0;
+  padding: 0.2rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.housing_page_header_hoster {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.housing_page_header_hoster_infos {
+  display: flex;
+  align-items: center;
+}
+.housing_page_header_hoster_infos_name {
+  width: 120px;
+  text-align: right;
+  margin-right: 0.5rem;
+  font-size: 18px;
+}
+.housing_page_header_hoster_infos_img {
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+}
+.housing_page_header_hoster_ratings {
+  margin-top: 1rem;
+  text-align: right;
+}
+.housing_page_header_hoster_ratings_star {
+  padding-left: 0.3rem;
+  font-size: 25px;
+}
+.housing_page_header_hoster_ratings_star_grey {
+  color: rgb(188, 186, 186);
+}
+.housing_page_collapses {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.housing_page_collapses_content {
+  margin: 1rem 0;
+  width: 47%;
+}
+.housing_page_collapses_content ul {
+  margin: 0;
+}
+
 html {
   position: relative;
   min-height: 100%;

@@ -1,0 +1,57 @@
+@import './variables';
+
+#carrousel-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+    height: 415px; // Hauteur fixe pour le conteneur du carrousel
+}
+
+.slide {
+    width: 100%;
+    height: 415px; // La hauteur doit correspondre à celle du conteneur
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    &.active {
+        opacity: 1; // La diapositive active est pleinement visible
+    }
+
+    .slide-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Les images couvrent toute la zone de la diapositive
+    }
+}
+
+.leftArrow, .rightArrow {
+    z-index: 2; // Assurez-vous que les flèches sont visibles par-dessus les diapositives
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent; // Aucun fond pour les boutons
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1; // Les flèches sont pleinement visibles au survol
+    }
+
+    img {
+        width: 30px; // Taille appropriée pour les images des flèches
+        height: auto; // Hauteur automatique pour maintenir le ratio d'aspect
+    }
+}
+
+.leftArrow {
+    left: 10px; // Positionnement de la flèche gauche
+}
+
+.rightArrow {
+    right: 10px; // Positionnement de la flèche droite
+}
