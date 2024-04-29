@@ -1,30 +1,32 @@
 import React, { useState } from 'react';
-import vectorDown from '../../assets/img/vectorBas.svg';
-import vectorUp from '../../assets/img/vectorHaut.svg';
+import vector from '../../assets/img/vectorBas.svg'; // Utilisez un seul vecteur qui représente la flèche.
 
 const Collapse = (props) => {
-    const [openTab, setOpenTab] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const toggleCollapse = () => {
-        setOpenTab(!openTab);
+        setIsOpen(!isOpen);
     };
 
     return (
-        <>
-            <div onClick={toggleCollapse} className="collapse_header">
-                <h2 className="collapse_header_title">{props.title}</h2>
+        <div className="collapse">
+            <div 
+                className={`collapse__header ${isOpen ? "expanded" : ""}`}
+                onClick={toggleCollapse}
+            >
+                <h2 className="collapse__header__title">{props.title}</h2>
                 <img 
-                    src={openTab ? vectorUp : vectorDown}
-                    alt={openTab ? "Collapse" : "Expand"} 
-                    className={`collapse_header_icon ${openTab ? "icon-up" : "icon-down"}`}
+                    src={vector}
+                    alt="Toggle collapse"
+                    className="collapse__header__icon"
                 />
             </div>
-            {openTab && 
-                <div className="collapse_content">
-                    {props.content}
-                </div>
-            }
-        </>
+            <div 
+                className={`collapse__content ${isOpen ? "expanded" : ""}`}
+            >
+                {props.content}
+            </div>
+        </div>
     );
 }
 

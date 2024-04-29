@@ -14,46 +14,47 @@
   width: 95%;
   margin: auto;
 }
-.header_logo_img {
+.header__logo-img {
   width: 10rem;
 }
 @media (max-width: 768px) {
-  .header_logo_img {
+  .header__logo-img {
     width: 7rem;
   }
 }
-.header_nav ul {
+.header__nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
 }
-.header_nav_link {
+.header__nav-link {
   font-size: 19px;
   margin: 1rem 0.5rem;
 }
-.header_nav_link_navlink {
+.header__nav-link-navlink {
   padding: 0.2rem 0.7rem;
   text-decoration: none;
-}
-.header_nav_link_navlink.header_nav_link_active {
-  font-family: "Montserrat-Medium", sans-serif;
-}
-.header_nav_link_navlink.header_nav_link_inactive {
   transition: all 350ms ease-in-out;
 }
-.header_nav_link_navlink.header_nav_link_inactive:hover {
+.header__nav-link-navlink--active {
   font-family: "Montserrat-Medium", sans-serif;
+  color: #ff5656;
+  border-radius: 0.3rem;
+}
+.header__nav-link-navlink:hover {
+  font-family: "Montserrat-Medium", sans-serif;
+  color: #ff5656;
 }
 
 @media (max-width: 768px) {
   .header {
     width: 98%;
   }
-  .header_nav ul {
+  .header__nav ul {
     padding-left: 0;
   }
-  .header_nav_link_navlink {
+  .header__nav-link-navlink {
     padding: 0.2rem 0.3rem;
   }
 }
@@ -256,64 +257,47 @@
   }
 }
 
-.collapse_header {
+.collapse__header {
   z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   border-radius: 0.4rem;
-  margin: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   background-color: #ff5656;
   padding: 0.4rem 0.5rem;
+  margin: 1rem 0;
 }
-.collapse_header_title {
+.collapse__header__title {
   margin: 0;
   font-size: 18px;
 }
-.collapse_header_icon {
+.collapse__header__icon {
   width: 20px;
-}
-.collapse .icon-down {
-  transform: rotate(0deg);
-  transition: transform 0.4s ease-in-out 0.4s;
-}
-.collapse .icon-up {
-  transform: rotate(180deg);
   transition: transform 0.4s ease-in-out;
 }
-.collapse_content {
+.collapse__header.expanded .collapse__header__icon {
+  transform: rotate(180deg);
+}
+.collapse__content {
   position: relative;
   z-index: 0;
-  padding: 0.8rem 1rem;
   background: white;
   border-radius: 0 0 0.3rem 0.3rem;
   font-size: 16px;
   line-height: 23px;
   overflow: hidden;
-  animation: slide 1s ease-in;
-  transition: margin-top 1s ease-in-out;
+  transition: max-height 0.8s ease-in-out, opacity 0.4s ease-in-out;
+  max-height: 0;
+  opacity: 0;
 }
-@media (max-width: 768px) {
-  .collapse_content {
-    animation-duration: 2s;
-  }
+.collapse__content.expanded {
+  max-height: 50vh;
+  opacity: 1;
 }
 
-@keyframes slide {
-  0%, 5% {
-    max-height: 0;
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  100% {
-    max-height: 100%;
-  }
-}
 #carrousel-container {
   display: flex;
   justify-content: center;

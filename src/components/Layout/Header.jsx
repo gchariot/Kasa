@@ -3,31 +3,37 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assets/img/logo-kasa.png';
 
 const Header = () => {
-    // Fonction pour obtenir la classe de NavLink en fonction de l'état actif
-    const getNavLinkClass = isActive => 
-        `header_nav_link_navlink ${isActive ? 'header_nav_link_active' : 'header_nav_link_inactive'}`;
-
     return (
-        <header className='header'>
-            <div className='header_logo'>
-                <img src={logo} alt='Logo de Kasa' className='header_logo_img' />
+        <header className="header">
+            <div className="header__logo">
+                <img src={logo} alt="Logo de Kasa" className="header__logo-img" />
             </div>
-            <nav className='header_nav'>
-                <ul>
-                    <li className='header_nav_link'>
+            <nav className="header__nav">
+                <ul className="header__nav-list">
+                    <li className="header__nav-item">
                         <NavLink
-                            className={({ isActive }) => getNavLinkClass(isActive)}
-                            title='Accueil'
-                            end to='/home'
+                            to="/home"
+                            end
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "header__nav-link header__nav-link--active"
+                                    : "header__nav-link"
+                            }
+                            title="Accueil"
                         >
                             Accueil
                         </NavLink>
                     </li>
-                    <li className='header_nav_link'>
+                    <li className="header__nav-item">
                         <NavLink
-                            className={({ isActive }) => getNavLinkClass(isActive)}
-                            title='À propos'
-                            end to='/about'
+                            to="/about"
+                            end
+                            className={({ isActive }) =>
+                                isActive
+                                    ? "header__nav-link header__nav-link--active"
+                                    : "header__nav-link"
+                            }
+                            title="À propos"
                         >
                             À propos
                         </NavLink>
@@ -36,6 +42,6 @@ const Header = () => {
             </nav>
         </header>
     );
-}
+};
 
 export default Header;
