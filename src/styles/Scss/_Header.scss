@@ -12,7 +12,7 @@
             width: 10rem;
 
             @media (max-width: 768px) {
-                width: 7rem; 
+                width: 7rem;
             }
         }
     }
@@ -25,25 +25,22 @@
             list-style: none;
         }
 
-        &-link {
+        .header__nav-link {
             font-size: 19px;
-            margin: 1rem 0.5rem;
+            margin: 1rem 2.5rem;
+            padding: 0.2rem 0.7rem;
+            text-decoration: none;
+            color: black;
+            transition: all 350ms ease-in-out;
 
-            &-navlink {
-                padding: 0.2rem 0.7rem;
-                text-decoration: none;
-                transition: all 350ms ease-in-out;
-                
-                &--active {
-                    font-family: $font-secondary;
-                    color: $primary-color; // Couleur du texte pour le lien actif
-                    border-radius: 0.3rem;
-                }
+            &--active {
+                font-family: $font-secondary;
+                border-bottom: 2px solid $primary-color;
+            }
 
-                &:hover {
-                    font-family: $font-secondary;
-                    color: $primary-color;
-                }
+            &:hover {
+                font-family: $font-secondary;
+                color: $primary-color;
             }
         }
     }
@@ -58,10 +55,8 @@
                 padding-left: 0;
             }
 
-            &-link {
-                &-navlink {
-                    padding: 0.2rem 0.3rem; 
-                }
+            .header__nav-link {
+                padding: 0.2rem 0.3rem;
             }
         }
     }
