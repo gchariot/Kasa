@@ -1,24 +1,24 @@
-import React from 'react';
-import { NavLink, useParams } from 'react-router-dom';
-import housings from '../../data/Logements.json'; // Assurez-vous que le chemin d'accès est correct
+import React, { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import housings from '../../data/Logements.json';
 import Slideshow from '../Layout/Slideshow';
 import Collapse from '../Layout/Collapse';
+import Rating from '../Layout/Rate';
 
 const HostingContent = () => {
     const { id } = useParams(); // Utilisation de useParams pour récupérer l'id depuis l'URL
+    const navigate = useNavigate();
     const housing = housings.find((housing) => housing.id === id); // Trouver le logement correspondant par l'id
 
-    if (!housing) { // Gestion du cas où aucun logement correspondant n'est trouvé
-        return (
-            <section className="error_page">
-                <p className="error_page_subtitle">
-                    Malheureusement, le logement que vous recherchez n'est plus disponible ou n'existe pas.
-                </p>
-                <NavLink to='/home' className="error_page_link">
-                    Retourner sur la page d'accueil
-                </NavLink> 
-            </section>
-        );
+    useEffect(() => {
+        if (!housing) {
+            navigate('/error404');
+        }
+    }, [housing, navigate]); // Dépendances de l'effet pour éviter les appels excessifs
+
+    // Condition pour ne rien rendre si housing est undefined
+    if (!housing) {
+        return null;
     }
 
     return (
@@ -43,6 +43,8 @@ const HostingContent = () => {
                         <p className='housing_page_header_hoster_infos_name'>{housing.host.name}</p>
                         <img src={housing.host.picture} alt='host-cover' className='housing_page_header_hoster_infos_img'/>
                     </div>
+                    <Rating score={parseInt(housing.rating)} /> {}
+                    
                 </article>
             </header>
 

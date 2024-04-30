@@ -354,33 +354,33 @@
 
 @media (max-width: 768px) {
   .housing_page {
-    min-height: 40rem !important;
+    min-height: 40rem;
   }
   .housing_page_header {
     flex-direction: column;
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
   }
   .housing_page_header_infos_tags_tag {
-    margin-bottom: 1rem !important;
+    margin-bottom: 1rem;
   }
   .housing_page_header_hoster {
-    flex-direction: row-reverse !important;
-    align-items: center !important;
-    margin-top: 0 !important;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 0;
     margin-bottom: 0.5rem;
   }
   .housing_page_header_hoster_infos {
     align-items: center;
   }
   .housing_page_header_hoster_infos_name {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .housing_page_header_hoster_ratings {
-    padding: 0 0.2rem 1rem 0 !important;
+    padding: 0 0.2rem 1rem 0;
   }
   .housing_page_header_hoster_ratings_star {
-    padding: 0 0.2rem 3rem 0 !important;
+    padding: 0 0.2rem 3rem 0;
   }
   .housing_page_collapses {
     flex-direction: column;
@@ -388,8 +388,8 @@
     align-items: center;
   }
   .housing_page_collapses_content {
-    width: 100% !important;
-    margin-bottom: 0 !important;
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 .housing_page {
@@ -400,7 +400,7 @@
 .housing_page_header {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0;
 }
 .housing_page_header_infos {
   display: flex;

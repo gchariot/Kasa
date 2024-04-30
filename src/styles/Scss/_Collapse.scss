@@ -42,7 +42,7 @@
         opacity: 0;
 
         &.expanded {
-            max-height: 50vh; // ou une autre valeur suffisamment grande pour votre contenu
+            max-height: 50vh; 
             opacity: 1;
         }
     }

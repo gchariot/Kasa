@@ -2,38 +2,38 @@
 
 @media(max-width: 768px) {
     .housing_page {
-        min-height: 40rem !important;
+        min-height: 40rem;
         
         &_header {
             flex-direction: column;
-            margin-bottom: 0 !important;
+            margin-bottom: 0;
             
             &_infos {
                 &_tags {
                     &_tag {
-                        margin-bottom: 1rem !important;
+                        margin-bottom: 1rem;
                     }
                 }
             }
             
             &_hoster {
-                flex-direction: row-reverse !important;
-                align-items: center !important;
-                margin-top: 0 !important;
+                flex-direction: row-reverse;
+                align-items: center;
+                margin-top: 0;
                 margin-bottom: 0.5rem;
                 
                 &_infos {
                     align-items: center;
                     &_name {
-                        margin-top: 0 !important;
-                        margin-bottom: 0 !important;
+                        margin-top: 0;
+                        margin-bottom: 0;
                     }
                 }
 
                 &_ratings {
-                    padding: 0 0.2rem 1rem 0 !important;
+                    padding: 0 0.2rem 1rem 0;
                     &_star {
-                        padding: 0 0.2rem 3rem 0 !important;
+                        padding: 0 0.2rem 3rem 0;
                     }
                 }
             }
@@ -45,8 +45,8 @@
             align-items: center;
             
             &_content {
-                width: 100% !important;
-                margin-bottom: 0 !important;
+                width: 100%;
+                margin-bottom: 0;
             }
         }
     }
@@ -60,7 +60,7 @@
     &_header {
         display: flex;
         justify-content: space-between;
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 0;
 
         &_infos {
             display: flex;
