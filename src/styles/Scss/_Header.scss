@@ -27,7 +27,7 @@
 
         .header__nav-link {
             font-size: 19px;
-            margin: 1rem 2.5rem;
+            margin: 1rem 1.5rem;
             padding: 0.2rem 0.7rem;
             text-decoration: none;
             color: black;
@@ -49,6 +49,7 @@
 @media (max-width: 768px) {
     .header {
         width: 98%;
+        text-transform: uppercase;
 
         &__nav {
             ul {
@@ -57,6 +58,10 @@
 
             .header__nav-link {
                 padding: 0.2rem 0.3rem;
+                font-size: 14px;
+                font-family: $font-secondary;
+                font-weight: 500;
+                
             }
         }
     }

@@ -30,7 +30,7 @@
 }
 .header__nav .header__nav-link {
   font-size: 19px;
-  margin: 1rem 2.5rem;
+  margin: 1rem 1.5rem;
   padding: 0.2rem 0.7rem;
   text-decoration: none;
   color: black;
@@ -48,12 +48,16 @@
 @media (max-width: 768px) {
   .header {
     width: 98%;
+    text-transform: uppercase;
   }
   .header__nav ul {
     padding-left: 0;
   }
   .header__nav .header__nav-link {
     padding: 0.2rem 0.3rem;
+    font-size: 14px;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-weight: 500;
   }
 }
 .banner {
@@ -67,14 +71,18 @@
 .banner_title {
   z-index: 1;
   color: white;
-  font-size: 28px;
+  font-size: 43px;
   position: absolute;
+  font-family: "Montserrat-Regular", sans-serif;
+  white-space: normal;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .banner_title {
-    width: 70%;
-    padding-left: 1rem;
-    justify-content: start;
+    width: 50%;
+    padding: 0 1rem;
+    font-size: 28px;
+    text-align: left;
   }
 }
 .banner_img {
@@ -191,7 +199,7 @@
   background-color: black;
 }
 .footer_logo {
-  margin-top: 1.5rem;
+  margin: 1rem auto;
   width: 6rem;
 }
 .footer_text {
@@ -216,7 +224,7 @@
 }
 @media (max-width: 768px) {
   .title_error {
-    font-size: 160px;
+    font-size: 96px;
     line-height: 210px;
   }
 }
@@ -231,6 +239,7 @@
   .p_error {
     font-size: 18px;
     line-height: 25px;
+    width: 70%;
   }
   .p_error span {
     display: flex;
@@ -244,14 +253,14 @@
   font-size: 18px;
   line-height: 25px;
   color: black;
-  margin-bottom: 1.7rem;
+  margin: 4rem auto;
   text-decoration: underline;
 }
 @media (max-width: 768px) {
   .link_error {
     font-size: 14px;
     line-height: 19px;
-    margin-top: 5rem;
+    margin: 4rem auto;
   }
 }
 
@@ -351,50 +360,10 @@
   right: 10px;
 }
 
-@media (max-width: 768px) {
-  .housing_page {
-    min-height: 40rem;
-  }
-  .housing_page_header {
-    flex-direction: column;
-    margin-bottom: 0;
-  }
-  .housing_page_header_infos_tags_tag {
-    margin-bottom: 1rem;
-  }
-  .housing_page_header_hoster {
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
-  .housing_page_header_hoster_infos {
-    align-items: center;
-  }
-  .housing_page_header_hoster_infos_name {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .housing_page_header_hoster_ratings {
-    padding: 0 0.2rem 1rem 0;
-  }
-  .housing_page_header_hoster_ratings_star {
-    padding: 0 0.2rem 3rem 0;
-  }
-  .housing_page_collapses {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .housing_page_collapses_content {
-    width: 100%;
-    margin-bottom: 0;
-  }
-}
 .housing_page {
   width: 95%;
   min-height: 35rem;
-  margin: 1rem auto 7rem auto;
+  margin: 1rem auto;
 }
 .housing_page_header {
   display: flex;
@@ -409,6 +378,8 @@
 .housing_page_header_infos_title {
   font-size: 35px;
   margin: 0;
+  color: #ff5656;
+  margin-bottom: 0.5rem;
 }
 .housing_page_header_infos_subtitle {
   font-size: 18px;
@@ -442,6 +413,7 @@
   text-align: right;
   margin-right: 0.5rem;
   font-size: 18px;
+  color: #ff5656;
 }
 .housing_page_header_hoster_infos_img {
   width: 3.3rem;
@@ -459,20 +431,67 @@
   padding-left: 0.3rem;
   font-size: 25px;
 }
-.housing_page_header_hoster_ratings_star_grey {
-  color: rgb(188, 186, 186);
-}
 .housing_page_collapses {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 .housing_page_collapses_content {
-  margin: 1rem 0;
   width: 47%;
 }
 .housing_page_collapses_content ul {
   margin: 0;
+}
+@media (max-width: 768px) {
+  .housing_page {
+    min-height: 40rem;
+  }
+  .housing_page_header {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .housing_page_header_infos_tags_tag {
+    margin-bottom: 1rem;
+  }
+  .housing_page_header_hoster {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .housing_page_header_hoster_infos {
+    align-items: center;
+  }
+  .housing_page_header_hoster_infos_name {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .housing_page_header_hoster_ratings {
+    padding: 0 0.2rem 1rem;
+  }
+  .housing_page_header_hoster_ratings_star {
+    padding: 0 0.2rem 3rem;
+  }
+  .housing_page_collapses {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .housing_page_collapses_content {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating-container .rating-star {
+  width: 1.5rem;
+  height: auto;
+  margin-right: 0.2rem;
 }
 
 html {
