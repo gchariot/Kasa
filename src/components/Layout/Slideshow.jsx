@@ -22,17 +22,20 @@ export default function Slideshow({ slides }) {
         <section id="carrousel-container" aria-roledescription="carousel" aria-label="Gallery">
             {length > 1 && (
                 <>
-                    <button onClick={prevSlide} className="leftArrow" aria-label="Diapositive précédente">
-                        <img src={leftArrow} alt="Précédente" />
+                    <button onClick={prevSlide} className="leftArrow" aria-label="Previous slide">
+                        <img src={leftArrow} alt="Previous" />
                     </button>
-                    <button onClick={nextSlide} className="rightArrow" aria-label="Diapositive suivante">
-                        <img src={rightArrow} alt="Suivante" />
+                    <button onClick={nextSlide} className="rightArrow" aria-label="Next slide">
+                        <img src={rightArrow} alt="Next" />
                     </button>
+                    <div className="slide-counter">
+                        {current + 1}/{length}
+                    </div>
                 </>
             )}
             {slides.map((slide, index) => (
                 <div key={index} className={current === index ? "slide active" : "slide"} aria-hidden={current !== index}>
-                    {index === current && <img src={slide} alt={`Diapositive ${index + 1}`} className="slide-image" />}
+                    {index === current && <img src={slide} alt={`Slide ${index + 1}`} className="slide-image" />}
                 </div>
             ))}
         </section>
